@@ -9,7 +9,7 @@ ROOTFS="$BUILD_DIRECTORY/mount"
 
 # 1. partition EBS volume
 parted "${DEVICE}" < "${BUILD_DIRECTORY}/files/parted.conf"
-# 2. format as XFS sleep 1 # occasionally mkfs.xfs complains that /dev/xvdb2 isn't available – sleep to give it time to become available
+# 2. format as XFS
 mkfs.xfs -L root "${DEVICE}2"
 mkdir "${ROOTFS}"
 mount "${DEVICE}2" "${ROOTFS}"
