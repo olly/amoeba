@@ -14,9 +14,9 @@ mkfs.xfs -L root "${DEVICE}2"
 mkdir "${ROOTFS}"
 mount "${DEVICE}2" "${ROOTFS}"
 
-# 3. install CentOS 7.3
+# 3. install CentOS 7.4
 rpm --root="${ROOTFS}" --initdb
-rpm --root="${ROOTFS}" --install http://mirror.centos.org/centos/7/os/x86_64/Packages/centos-release-7-3.1611.el7.centos.x86_64.rpm
+rpm --root="${ROOTFS}" --install http://mirror.centos.org/centos/7/os/x86_64/Packages/centos-release-7-4.1708.el7.centos.x86_64.rpm
 
 # 4. install packages
 yum --installroot="${ROOTFS}" --assumeyes groupinstall core

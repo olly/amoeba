@@ -27,6 +27,8 @@
         "volume_type": "gp2"
       }
     ],
+    "sriov_support": true,
+    "ena_support": true,
 
     "ami_name": "amoeba-{{ user `BuildTime` }}",
     "ami_virtualization_type": "hvm",
